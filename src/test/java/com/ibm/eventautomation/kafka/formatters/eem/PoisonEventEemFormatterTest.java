@@ -49,7 +49,7 @@ public class PoisonEventEemFormatterTest extends AvroFormatterTest {
     @Override
     public String getExpectedFormattedOutput()
     {
-        return "Unable to deserialize event (Array index out of range: -16)";
+        return "Unable to deserialize event (Index -16 out of bounds for length 2)";
     }
 
 

@@ -1,0 +1,23 @@
+{
+    "type": "record",
+    "name": "SampleRecord",
+    "namespace": "com.ibm.eventautomation.kafka.schemas",
+    "fields": [
+        {
+            "name": "id",
+            "type": "string"
+        },
+        {
+            "name": "name",
+            "type": "string"
+        },
+        {
+            "name": "price",
+            "type": "double"
+        },
+        {
+            "name": "quantity",
+            "type": "int"
+        }
+    ]
+}

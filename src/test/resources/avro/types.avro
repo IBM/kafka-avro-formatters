@@ -1,0 +1,119 @@
+{
+    "type": "record",
+    "name": "AllTypes",
+    "namespace": "com.ibm.eventautomation.kafka.schemas",
+    "fields": [
+        {
+            "name": "val1",
+            "type": "boolean"
+        },
+        {
+            "name": "val2",
+            "type": "int"
+        },
+        {
+            "name": "val3",
+            "type": "long"
+        },
+        {
+            "name": "val4",
+            "type": "float"
+        },
+        {
+            "name": "val5",
+            "type": "double"
+        },
+        {
+            "name": "val6",
+            "type": "bytes"
+        },
+        {
+            "name": "val7",
+            "type": "string"
+        },
+        {
+            "name": "val8",
+            "type": {
+                "name": "AlphabetLetters",
+                "type": "enum",
+                "symbols": [ "A", "B", "C" ]
+            }
+        },
+        {
+            "name": "val9",
+            "type": {
+                "type": "array",
+                "items": "string"
+            }
+        },
+        {
+            "name": "val10",
+            "type": {
+                "type": "array",
+                "items": "boolean"
+            }
+        },
+        {
+            "name": "val11",
+            "type": {
+                "type": "array",
+                "items": "int"
+            }
+        },
+        {
+            "name": "val12",
+            "type": {
+                "type": "map",
+                "values": "string"
+            }
+        },
+        {
+            "name": "val13",
+            "type": {
+                "type": "map",
+                "values": "int"
+            }
+        },
+        {
+            "name": "val14",
+            "type": {
+                "type": "map",
+                "values": "boolean"
+            }
+        },
+        {
+            "name": "val15",
+            "type": {
+                "name": "MyMd5",
+                "type": "fixed",
+                "size": 16
+            }
+        },
+        {
+            "name": "val16",
+            "type": [ "string", "boolean" ],
+            "default": "placeholder"
+        },
+        {
+            "name": "val17",
+            "type": {
+                "type": "array",
+                "items": {
+                    "type": "record",
+                    "name": "Val17Inner",
+                    "namespace": "com.ibm.eventautomation.kafka.schemas",
+                    "fields": [
+                        {
+                            "name": "val17a",
+                            "type": "string"
+                        },
+                        {
+                            "name": "val17b",
+                            "type": "string"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

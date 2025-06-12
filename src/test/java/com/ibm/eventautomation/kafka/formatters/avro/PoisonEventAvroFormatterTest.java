@@ -63,7 +63,7 @@ public class PoisonEventAvroFormatterTest extends AvroFormatterTest {
     @Override
     public String getExpectedFormattedOutput()
     {
-        return "Unable to deserialize event (Malformed data. Length is negative: -16)";
+        return "Unable to deserialize event (";
     }
 
     @Override

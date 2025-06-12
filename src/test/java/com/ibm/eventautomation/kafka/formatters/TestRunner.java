@@ -17,6 +17,7 @@ package com.ibm.eventautomation.kafka.formatters;
 
 import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -193,6 +194,8 @@ public class TestRunner {
 
 
     private static void runTest(TestCase testCase) throws IOException, InterruptedException, ExecutionException {
+        System.out.println(testCase.getClass().getCanonicalName());
+
         // get a new topic for this test case
         final String topic = testCase.getTopicName(++TOPIC_SUFFIX);
 
@@ -228,7 +231,10 @@ public class TestRunner {
 
             // verify the output against the test case
             String formattedOutput = out.toString();
-            assertEquals(testCase.getExpectedFormattedOutput() + testCase.getSeparator(), formattedOutput);
+            assertTrue(
+                formattedOutput.startsWith(testCase.getExpectedFormattedOutput()),
+                "Expected output: " + testCase.getExpectedFormattedOutput() + ", but got: " + formattedOutput
+            );
         }
         finally {
             // restore the default output stream

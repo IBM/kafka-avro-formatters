@@ -1,0 +1,8 @@
+.DS_Store
+.classpath
+.vscode
+.settings/
+.project
+target/
+build
+dependency-reduced-pom.xml

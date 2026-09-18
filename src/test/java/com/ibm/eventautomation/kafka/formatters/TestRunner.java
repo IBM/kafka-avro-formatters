@@ -15,9 +15,9 @@
  */
 package com.ibm.eventautomation.kafka.formatters;
 
-import static org.junit.Assert.fail;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -60,7 +60,7 @@ import io.apicurio.registry.serde.Legacy4ByteIdHandler;
 
 public class TestRunner {
 
-    private static KafkaContainer kafka = new KafkaContainer("apache/kafka:3.9.1-rc1");
+    private static KafkaContainer kafka = new KafkaContainer("apache/kafka:3.9.2");
     private static ApicurioContainer schemaregistry = new ApicurioContainer();
     private static EemServer eem = new EemServer();
 

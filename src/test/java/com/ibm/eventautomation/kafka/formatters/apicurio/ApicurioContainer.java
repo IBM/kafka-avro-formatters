@@ -23,7 +23,7 @@ import org.testcontainers.containers.wait.strategy.Wait;
  */
 public class ApicurioContainer extends GenericContainer<ApicurioContainer> {
 
-    private static final String IMAGE_NAME = "apicurio/apicurio-registry:latest";
+    private static final String IMAGE_NAME = "apicurio/apicurio-registry-mem:2.6.13.Final";
 
     private static final int APICURIO_PORT = 8080;
 

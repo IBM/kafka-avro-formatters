@@ -15,7 +15,7 @@ It can be used with:
 
 For example:
 ```
-export CLASSPATH=avro-formatters-0.1.0.jar
+export CLASSPATH=avro-formatters-0.2.0.jar
 
 kafka-console-consumer.sh \
   --bootstrap-server  kafka-bootstrap:9092 \
@@ -153,7 +153,7 @@ Typing the `--formatter` and `--formatter-config` option every time you use `kaf
 For example, if you do something like this:
 
 ```sh
-alias avro-consumer="CLASSPATH=/absolute/location/of/avro-formatters-0.1.0.jar \
+alias avro-consumer="CLASSPATH=/absolute/location/of/avro-formatters-0.2.0.jar \
 /absolute/location/of/kafka/bin/kafka-console-consumer.sh \
 --formatter com.ibm.eventautomation.kafka.formatters.ApicurioFormatter \
 --formatter-config /absolute-location/of/apicurio-formatter.properties"

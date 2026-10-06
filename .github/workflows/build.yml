@@ -5,6 +5,9 @@ on:
 
 name: Build and create release
 
+permissions:
+  contents: write # needed to create the release and upload the jar
+
 jobs:
   build:
     name: Build and upload release binary
